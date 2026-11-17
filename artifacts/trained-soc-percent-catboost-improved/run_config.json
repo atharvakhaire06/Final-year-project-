@@ -1,0 +1,7 @@
+{
+  "prepared": "artifacts\\prepared-full-source",
+  "output": "artifacts\\trained-soc-percent-catboost-improved",
+  "seed": 20261115,
+  "train_rows": 35000,
+  "iterations": 350
+}

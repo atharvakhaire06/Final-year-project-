@@ -1,0 +1,24 @@
+# Raw source data is larger than GitHub's per-file limit.
+dataset/
+
+# Keep only the final reproducibility records and production model artifacts.
+artifacts/*
+!artifacts/inspection/
+!artifacts/inspection/**
+!artifacts/prepared-full-source/
+!artifacts/prepared-full-source/preprocessing_audit.csv
+!artifacts/prepared-full-source/preparation.json
+!artifacts/prepared-full-source/sample_split_indices.csv
+!artifacts/trained-soc-percent/
+!artifacts/trained-soc-percent/**
+!artifacts/trained-soc-percent-enhanced/
+!artifacts/trained-soc-percent-enhanced/**
+!artifacts/trained-soc-percent-catboost-improved/
+!artifacts/trained-soc-percent-catboost-improved/**
+
+# Generated caches and document QA intermediates.
+__pycache__/
+*.py[cod]
+catboost_info/
+reports/qa_render/
+reports/a11y_report.json

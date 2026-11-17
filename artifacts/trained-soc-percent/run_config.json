@@ -1,0 +1,7 @@
+{
+  "prepared": "artifacts\\prepared-full-source",
+  "output": "artifacts\\trained-soc-percent",
+  "seed": 20261115,
+  "rf_estimators": 30,
+  "boost_iterations": 150
+}

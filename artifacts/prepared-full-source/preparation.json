@@ -1,0 +1,23 @@
+{
+  "input_rows": 1518934,
+  "primary_rows": 606886,
+  "sample_rows": 119999,
+  "seed": 20261115,
+  "block_size_degrees": 5.0,
+  "profile_group": {
+    "selected_group_column": "olc_id",
+    "repeated_rows": 523639,
+    "non_missing_rows": 606886,
+    "missing_identifier_rows_made_singletons": 0
+  },
+  "split_rows_full": {
+    "train": 408907,
+    "validation": 107404,
+    "test": 90575
+  },
+  "split_rows_sample": {
+    "train": 80853,
+    "validation": 21237,
+    "test": 17909
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "prepared_input": "artifacts\\prepared-full-source",
+  "sample_rows": 119999,
+  "train_rows_used": 35000,
+  "split_rows": {
+    "train": 80853,
+    "validation": 21237,
+    "test": 17909
+  },
+  "target": {
+    "source_column": "organic_carbon",
+    "source_unit": "g/kg",
+    "conversion": "soc_percent = organic_carbon / 10",
+    "model_output_unit": "percent"
+  },
+  "features": {
+    "numeric": [
+      "clay_total",
+      "silt_total",
+      "sand_total",
+      "ph_h2o",
+      "horizon_midpoint_cm",
+      "hzn_top",
+      "hzn_bot",
+      "layer_sequence",
+      "latitude_decimal_degrees",
+      "longitude_decimal_degrees",
+      "total_nitrogen_ncs",
+      "cec_nh4_ph_7",
+      "ca_ext",
+      "mg_ext",
+      "na_ext",
+      "k_ext",
+      "ph_kcl",
+      "ph_cacl2",
+      "ec_water_extractable",
+      "ec_predict_one_to_two",
+      "horizon_thickness_cm",
+      "lat_sin",
+      "lat_cos",
+      "lon_sin",
+      "lon_cos"
+    ],
+    "categorical": [
+      "hzn_desgn",
+      "depth_category",
+      "surface_subsurface"
+    ],
+    "configuration": "extended + target-independent depth and coordinate transforms"
+  },
+  "selection": {
+    "criterion": "spatial validation R\u00b2",
+    "validation_r2": 0.5841986793267562,
+    "test_not_used_for_selection": true
+  },
+  "models": {
+    "catboost_extended": {
+      "status": "trained",
+      "train": {
+        "n": 35000,
+        "r2": 0.8453896401504823,
+        "rmse": 2.863603967354163,
+        "mae": 1.2127280557514888,
+        "mean_prediction_bias": 0.022749432281886035
+      },
+      "validation": {
+        "n": 21237,
+        "r2": 0.5841986793267562,
+        "rmse": 3.928067568926425,
+        "mae": 1.6777561119415574,
+        "mean_prediction_bias": 0.29963773351771983
+      },
+      "test": {
+        "n": 17909,
+        "r2": 0.24156515720427207,
+        "rmse": 6.597365808929678,
+        "mae": 3.874975018030376,
+        "mean_prediction_bias": 1.5850467381817412
+      }
+    }
+  },
+  "selected_by_validation_rmse": "catboost",
+  "stock": {
+    "eligible_uncorrected_test_horizons": 3709,
+    "corrected_stock_available": false
+  }
+}

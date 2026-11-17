@@ -1,0 +1,5 @@
+{
+  "prepared": "artifacts\\prepared-full-source",
+  "output": "artifacts\\trained-soc-percent-enhanced",
+  "seed": 20261115
+}

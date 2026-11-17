@@ -1,0 +1,7 @@
+stage,rows_remaining,rows_removed
+loaded,1518934,0
+missing_target,1068424,450510
+negative_target,1068424,0
+missing_or_invalid_coordinates,1068424,0
+invalid_depth,1054188,14236
+outside_0_to_30_cm,606886,447302

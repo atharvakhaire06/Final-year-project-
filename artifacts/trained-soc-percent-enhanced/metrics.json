@@ -1,0 +1,87 @@
+{
+  "prepared_input": "artifacts\\prepared-full-source",
+  "sample_rows": 119999,
+  "split_rows": {
+    "train": 80853,
+    "validation": 21237,
+    "test": 17909
+  },
+  "target": {
+    "source_column": "organic_carbon",
+    "source_unit": "g/kg",
+    "conversion": "soc_percent = organic_carbon / 10",
+    "model_output_unit": "percent"
+  },
+  "features": {
+    "numeric": [
+      "clay_total",
+      "silt_total",
+      "sand_total",
+      "ph_h2o",
+      "horizon_midpoint_cm",
+      "hzn_top",
+      "hzn_bot",
+      "layer_sequence",
+      "latitude_decimal_degrees",
+      "longitude_decimal_degrees",
+      "total_nitrogen_ncs",
+      "cec_nh4_ph_7",
+      "ca_ext",
+      "mg_ext",
+      "na_ext",
+      "k_ext",
+      "ph_kcl",
+      "ph_cacl2",
+      "ec_water_extractable",
+      "ec_predict_one_to_two",
+      "horizon_thickness_cm",
+      "lat_sin",
+      "lat_cos",
+      "lon_sin",
+      "lon_cos"
+    ],
+    "categorical": [
+      "hzn_desgn",
+      "depth_category",
+      "surface_subsurface"
+    ],
+    "configuration": "extended + target-independent depth and coordinate transforms"
+  },
+  "selection": {
+    "criterion": "spatial validation R\u00b2",
+    "validation_r2": 0.6634862468604049,
+    "test_not_used_for_selection": true
+  },
+  "models": {
+    "xgboost_extended": {
+      "status": "trained",
+      "train": {
+        "n": 80853,
+        "r2": 0.9287687903721293,
+        "rmse": 1.9396504971144748,
+        "mae": 0.8050532341355957,
+        "mean_prediction_bias": -0.0010739106099265342
+      },
+      "validation": {
+        "n": 21237,
+        "r2": 0.6634862468604049,
+        "rmse": 3.5337630609741875,
+        "mae": 1.3199256695694666,
+        "mean_prediction_bias": -0.11354626429345818
+      },
+      "test": {
+        "n": 17909,
+        "r2": 0.37663986768222,
+        "rmse": 5.981098279916736,
+        "mae": 2.291481431516707,
+        "mean_prediction_bias": -0.7953715370974329
+      }
+    }
+  },
+  "selected_by_validation_rmse": "xgboost",
+  "stock": {
+    "eligible_uncorrected_test_horizons": 3709,
+    "corrected_stock_available": false,
+    "label": "uncorrected; coarse-fragment weight percent not applied"
+  }
+}
